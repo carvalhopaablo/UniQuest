@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<title>APP GAMIFY</title>
+
+
+        #char {
+            position: absolute;
+            width: 22px;
+            height: 44px;
+            image-rendering: pixelated;
+        }
+		#background {
+      border: 5px solid #FF226D;
+			position: absolute;
+			image-rendering: pixelated;
+		}
+        body {
+           // overflow: hidden; /* Impede a rolagem da página */
+        }
+</head>
+
+<body>
+<img id="background" src="https://img.itch.zone/aW1hZ2UvNDA0MTkyLzIwMDY0MTYucG5n/original/gN0JDi.png">
+<img id="char" src="https://media.tenor.com/BHqTjwn2hcQAAAAM/walk-sprite.gif">
+
+  <script>
+			const image = document.getElementById('char');
+        let positionX = 0;
+        let positionY = 0;
+        
+		let isFlipped = false;
+		
+		const zoomLevel = window.devicePixelRatio;
+		
+		const speed = zoomLevel*40;
+
+console.log("Nível de Zoom: " + zoomLevel);
+
+        document.addEventListener('keydown', (event) => {
+        
+		if (event.key === 'ArrowLeft') {
+            isFlipped = true;
+            image.style.transform = 'scaleX(-1)';
+        } else if (event.key === 'ArrowRight') {
+            isFlipped = false;
+            image.style.transform = 'scaleX(1)';
+        }
+		
+		switch (event.key) {
+                case 'ArrowUp':
+                    positionY -= speed;
+                    break;
+					
+                case 'ArrowDown':
+                    positionY += speed;
+                    break;
+					
+                case 'ArrowLeft':
+                    positionX -= speed;
+                    break;
+					
+                case 'ArrowRight':
+                    positionX += speed;
+                    break;
+            }
+
+            image.style.left = positionX + 'px';
+            image.style.top = positionY + 'px';
+        });
+	</script>
+
+</body>
+</html>
