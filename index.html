@@ -2,8 +2,6 @@
 
 <head>
 <title>APP GAMIFY</title>
-
-
         #char {
             position: absolute;
             width: 22px;
@@ -21,11 +19,12 @@
 </head>
 
 <body>
+	
 <img id="background" src="https://img.itch.zone/aW1hZ2UvNDA0MTkyLzIwMDY0MTYucG5n/original/gN0JDi.png">
 <img id="char" src="https://media.tenor.com/BHqTjwn2hcQAAAAM/walk-sprite.gif">
 
   <script>
-			const image = document.getElementById('char');
+	const image = document.getElementById('char');
         let positionX = 0;
         let positionY = 0;
         
@@ -35,7 +34,7 @@
 		
 		const speed = zoomLevel*40;
 
-console.log("Nível de Zoom: " + zoomLevel);
+	console.log("Nível de Zoom: " + zoomLevel);
 
         document.addEventListener('keydown', (event) => {
         
