@@ -2,35 +2,66 @@
 <html>
 
 <head>
-
     <title>APP GAMIFY</title>
-
     <style>
         #char {
             position: absolute;
-			width: 36px;
+            width: 36px;
             height: 60px;
             image-rendering: pixelated;
         }
-		#background {
-			position: absolute;
-			width: 1280px;
+
+        #background {
+            position: absolute;
+            width: 1280px;
             height: 1280px;
-			image-rendering: pixelated;
-		}
-        body {
-           // overflow: hidden; /* Impede a rolagem da página */
+            image-rendering: pixelated;
         }
-	
+
+        body {
+            margin: 0; /* Remove as margens padrão do corpo da página */
+            overflow: hidden; /* Impede a rolagem da página */
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            margin-bottom: 20px; /* Ajuste conforme necessário */
+        }
+
+        /* Adiciona algum estilo básico aos botões para torná-los visíveis */
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+			border-radius: 5px;
+			background-color: #FF226D;
+			font-weight: bold;
+			color: white;
+        }
+		
     </style>
 </head>
 
 <body>
-	
-	<img id="background" src="background.png">
-	<img id="char" src="char1.gif">
-	
-   <script src="charMovement.js"> </script>
+    <div id="background-container">
+        <img id="background" src="background.png">
+    </div>
+
+    <img id="char" src="char1.gif">
+
+    <div class="button-container">
+        <button id="btnUp">Up</button>
+		<p>
+        <button id="btnLeft">Left</button>
+        <button id="btnDown">Down</button>
+        <button id="btnRight">Right</button>
+    </div>
+
+    <script src="charMovement.js"></script>
 </body>
 
 </html>
