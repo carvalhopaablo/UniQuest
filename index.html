@@ -2,10 +2,6 @@
 <html>
 
 <head>
-    
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
     <title>APP GAMIFY</title>
     <style>
         #char {
@@ -38,12 +34,15 @@
 
         /* Adiciona algum estilo básico aos botões para torná-los visíveis */
         button {
+			width: 110px; /* Largura do botão */
+            height: 60px; /* Altura do botão */
             margin: 5px;
             padding: 10px;
             cursor: pointer;
-			border-radius: 5px;
+			border-radius: 10px;
 			background-color: #FF226D;
 			font-weight: bold;
+			font-size: 16px;
 			color: white;
         }
 		
@@ -58,11 +57,11 @@
     <img id="char" src="char1.gif">
 
     <div class="button-container">
-        <button id="btnUp">Up</button>
+        <button id="btnUp"> ∧ </button>
 		<p>
-        <button id="btnLeft">Left</button>
-        <button id="btnDown">Down</button>
-        <button id="btnRight">Right</button>
+        <button id="btnLeft"> < </button>
+        <button id="btnDown"> v </button>
+        <button id="btnRight"> > </button>
     </div>
 
     <script src="charMovement.js"></script>
