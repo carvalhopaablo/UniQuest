@@ -39,6 +39,5 @@ document.getElementById('btnDown').addEventListener('click', () => {
 
 // Função para atualizar a posição da imagem
 function updateImagePosition() {
-    image.style.left = positionX + 'px';
-    image.style.top = positionY + 'px';
+    image.style.transform = `translate(${positionX}px, ${positionY}px)`;
 }
