@@ -4,7 +4,7 @@ let positionY = 0;
 let isFlipped = false;
 
 const zoomLevel = window.devicePixelRatio;
-const speed = 80;
+const speed = 40;
 
 // Adiciona ouvintes de eventos para os botões clicáveis
 document.getElementById('btnLeft').addEventListener('click', () => {
