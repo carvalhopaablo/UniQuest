@@ -6,10 +6,13 @@
     <style>
         #char {
             position: absolute;
-            width: 36px;
-            height: 60px;
+            width: 24px;
+            height: 40px;
             image-rendering: pixelated;
+			left: 4px;
+			top: 12px;
         }
+
 
         #background {
             position: absolute;
@@ -20,7 +23,7 @@
 
         body {
             margin: 0; /* Remove as margens padrão do corpo da página */
-            overflow: hidden; /* Impede a rolagem da página */
+			overflow: auto;
         }
 
         .button-container {
@@ -63,8 +66,9 @@
 		<img id="btnDown" class="button" src="botao_baixo.png">
 		<img id="btnRight" class="button" src="botao_direita.png">
     </div>
-
+	
     <script src="charMovement.js"></script>
+	
 </body>
 
 </html>
