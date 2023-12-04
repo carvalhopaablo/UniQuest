@@ -13,20 +13,20 @@ document.getElementById('btnDown').addEventListener('click', () => moveDown());
 // Adiciona um ouvinte de eventos para as setas do teclado
 document.addEventListener('keydown', (event) => {
     switch (event.key) {
-        case 'ArrowLeft':
-            event.preventDefault(); // Prevenir o comportamento padrão apenas para a seta para a esquerda
+        case 'a':
+           // event.preventDefault(); // Prevenir o comportamento padrão apenas para a seta para a esquerda
             moveLeft();
             break;
-        case 'ArrowRight':
-            event.preventDefault(); // Prevenir o comportamento padrão apenas para a seta para a direita
+        case 'd':
+         //   event.preventDefault(); // Prevenir o comportamento padrão apenas para a seta para a direita
             moveRight();
             break;
-        case 'ArrowUp':
-            event.preventDefault(); // Prevenir o comportamento padrão apenas para a seta para cima
+        case 'w':
+          //  event.preventDefault(); // Prevenir o comportamento padrão apenas para a seta para cima
             moveUp();
             break;
-        case 'ArrowDown':
-            event.preventDefault(); // Prevenir o comportamento padrão apenas para a seta para baixo
+        case 's':
+          //  event.preventDefault(); // Prevenir o comportamento padrão apenas para a seta para baixo
             moveDown();
             break;
     }
