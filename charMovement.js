@@ -43,7 +43,7 @@ function moveLeft() {
 
 // Função para mover para a direita
 function moveRight() {
-    if (positionX < 1440) {
+    if (positionX < 1472) {
         positionX += speed;
         updateImagePosition('walk_right.gif', 'right');
         window.scrollBy(speed, 0);
